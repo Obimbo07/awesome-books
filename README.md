@@ -27,7 +27,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Capstone Project] <a name="about-project"></a>
+# 📖 [Awesome Books] <a name="about-project"></a>
 
 > Awesome Books is a projects for displaying a list of books and having the ability to add and remove books from the lists.
 
