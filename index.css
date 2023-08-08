@@ -1,0 +1,11 @@
+.Add-books {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.book {
+  padding-bottom: 5%;
+}
