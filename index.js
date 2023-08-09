@@ -58,8 +58,7 @@ class BookLibrary {
       const bookElement = document.createElement('div');
       bookElement.classList.add('book');
       bookElement.innerHTML = `
-                <h2>${book.title}</h2>
-                <p>${book.Author}</p>
+                <h2>${book.title}</h2> by <p>${book.Author}</p>
             `;
 
       const removeButton = document.createElement('button');
@@ -79,5 +78,5 @@ class BookLibrary {
     this.bookAuthor.value = '';
   }
 }
-
+// eslint-disable-next-line no-unused-vars
 const library = new BookLibrary();
