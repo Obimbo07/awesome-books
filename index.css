@@ -1,14 +1,96 @@
-.Add-books {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+#available-books {
+  width: 96vw;
+  height: 60vh;
+  overflow-y: scroll;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .book {
-  padding-bottom: 5%;
+  padding: 8px 10px;
+}
+
+.book:nth-child(odd) {
+  background-color: rgb(224, 224, 224);
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  float: left;
+  margin-right: 6px;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  float: left;
+}
+
+button {
+  font-size: 1.1rem;
+  font-weight: 400;
+  float: right;
+  box-shadow: #0005 2px 3px 3px;
+  padding: 3px 6px;
+}
+
+#book-submisson {
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.Add-books {
+  width: 70vw;
+  margin: 2vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Add-books h2 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 4vh;
+  padding: 2vh 0;
+  width:fit-content;
+  border-top: 3px solid grey;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 4px 8px;
+}
+
+input:last-child {
+  width: 30%;
+  align-self: flex-end;
 }

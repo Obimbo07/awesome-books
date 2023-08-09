@@ -58,11 +58,11 @@ class BookLibrary {
       const bookElement = document.createElement('div');
       bookElement.classList.add('book');
       bookElement.innerHTML = `
-                <h2>${book.title}</h2> by <p>${book.Author}</p>
+                <h2>"${book.title}" by</h2> <p>${book.Author}</p>
             `;
 
       const removeButton = document.createElement('button');
-      removeButton.textContent = 'remove';
+      removeButton.textContent = 'Remove';
       bookElement.appendChild(removeButton);
 
       removeButton.addEventListener('click', () => {
