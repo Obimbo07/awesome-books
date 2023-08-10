@@ -1,7 +1,7 @@
 class BookLibrary {
   constructor() {
     this.books = [];
-    this.booksSection = document.getElementById('available-books');
+    this.booksSection = document.getElementById('section1');
     this.bookForm = document.getElementById('book-form');
     this.bookTitle = document.getElementById('book-title');
     this.bookAuthor = document.getElementById('Author');
@@ -80,3 +80,38 @@ class BookLibrary {
 }
 // eslint-disable-next-line no-unused-vars
 const library = new BookLibrary();
+
+const currentDate = new Date();
+const options = {
+  year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false,
+};
+const formattedDate = currentDate.toLocaleDateString('en-US', options);
+const displayDate = document.getElementById('date-display');
+displayDate.textContent = formattedDate;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('.nav-item');
+  const contentSections = document.querySelectorAll('.content-section');
+
+  navItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const targetSectionId = event.currentTarget.getAttribute('data-target');
+      // eslint-disable-next-line no-use-before-define
+      showSection(targetSectionId);
+    });
+  });
+
+  function showSection(sectionId) {
+    contentSections.forEach((section) => {
+      if (section.id === sectionId) {
+        section.classList.remove('hidden');
+      } else {
+        section.classList.add('hidden');
+      }
+    });
+  }
+
+  showSection(contentSections[0].id);
+});
