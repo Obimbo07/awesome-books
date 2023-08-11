@@ -38,7 +38,7 @@ header {
 }
 
 .date-section {
- width: 100%;
+  width: 100%;
 }
 
 #date-display {
@@ -46,6 +46,7 @@ header {
   justify-content: flex-end;
   padding: 2px;
 }
+
 .book {
   padding: 8px 10px;
 }
@@ -81,7 +82,6 @@ button {
   justify-content: flex-start;
   align-items: center;
 }
-
 
 .Add-books {
   width: 70vw;
