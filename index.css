@@ -14,19 +14,37 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  border: solid;
+  padding: 13px;
   width: 100%;
 }
 
-#available-books {
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 50px;
+}
+
+#section1 {
   width: 96vw;
   height: 60vh;
   overflow-y: scroll;
   border: 3px solid black;
-  display: flex;
   flex-direction: column;
+}
+
+.date-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#date-display {
+  padding: 2px;
 }
 
 .book {
@@ -58,6 +76,13 @@ button {
   padding: 3px 6px;
 }
 
+#section2 {
+  width: 100vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .Add-books {
   width: 70vw;
   margin: 2vh 0;
@@ -85,4 +110,16 @@ input {
 input:last-child {
   width: 30%;
   align-self: flex-end;
+}
+
+.footer {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  margin-left: 44px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
 }
