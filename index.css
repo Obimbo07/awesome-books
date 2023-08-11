@@ -39,11 +39,11 @@ header {
 
 .date-section {
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #date-display {
-  display: flex;
-  justify-content: flex-end;
   padding: 2px;
 }
 

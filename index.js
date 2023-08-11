@@ -1,6 +1,10 @@
 class BookLibrary {
   constructor() {
     this.books = [];
+    this.booksSection = document.getElementById('section1');
+    this.bookForm = document.getElementById('book-form');
+    this.bookTitle = document.getElementById('book-title');
+    this.bookAuthor = document.getElementById('Author');
 
     this.loadBooksFromLocalStorage();
     this.displayBooks();
@@ -57,7 +61,7 @@ class BookLibrary {
       const bookElement = document.createElement('div');
       bookElement.classList.add('book');
       bookElement.innerHTML = `
-                <h2>"${book.title}" by</h2> <p>${book.Author}</p>
+                <h2>"${book.title}" by</h2><p>${book.Author}</p>
             `;
 
       const removeButton = document.createElement('button');
@@ -88,7 +92,7 @@ const formattedDate = currentDate.toLocaleDateString('en-US', options);
 const displayDate = document.getElementById('date-display');
 displayDate.textContent = formattedDate;
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const navItems = document.querySelectorAll('.nav-item');
   const contentSections = document.querySelectorAll('.content-section');
 
@@ -97,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
 
       const targetSectionId = event.currentTarget.getAttribute('data-target');
-      // eslint-disable-next-line no-use-before-define
       showSection(targetSectionId);
     });
   });
@@ -114,3 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   showSection(contentSections[0].id);
 });
+
