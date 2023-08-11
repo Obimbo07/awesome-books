@@ -81,9 +81,8 @@ class BookLibrary {
     this.bookAuthor.value = '';
   }
 }
-// eslint-disable-next-line no-unused-vars
 const library = new BookLibrary();
-
+library.displayBooks();
 const currentDate = new Date();
 const options = {
   year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false,
@@ -92,18 +91,9 @@ const formattedDate = currentDate.toLocaleDateString('en-US', options);
 const displayDate = document.getElementById('date-display');
 displayDate.textContent = formattedDate;
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-item');
   const contentSections = document.querySelectorAll('.content-section');
-
-  navItems.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      const targetSectionId = event.currentTarget.getAttribute('data-target');
-      showSection(targetSectionId);
-    });
-  });
 
   function showSection(sectionId) {
     contentSections.forEach((section) => {
@@ -115,6 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  navItems.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const targetSectionId = event.currentTarget.getAttribute('data-target');
+      showSection(targetSectionId);
+    });
+  });
+
   showSection(contentSections[0].id);
 });
-
