@@ -58,14 +58,6 @@ button {
   padding: 3px 6px;
 }
 
-#book-submisson {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .Add-books {
   width: 70vw;
   margin: 2vh 0;
