@@ -5,17 +5,39 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="author" content="Austin obimbo" />
   <title>Awesome Books</title>
-  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="/index.css" />
 </head>
 <body>
   <header>
     <h1>Awesome Books</h1>
+    <nav class="nav-bar">
+      <ul class="nav-items">
+        <a href=""
+          ><li class="nav-item" id="list-btn" data-target="section1">
+            List
+          </li></a
+        >
+        <a href=""
+          ><li class="nav-item" id="Addnew-btn" data-target="section2">
+            Add New
+          </li></a
+        >
+        <a href=""
+          ><li class="nav-item" id="Contact-btn" data-target="section3">
+            Contact us
+          </li></a
+        >
+      </ul>
+    </nav>
   </header>
-  <section id="available-books">
+  <div class="date-section">
+    <h1 id="date-display"></h1>
+  </div>
+  <section class="content-section" id="section1">
     <!---books should be displayed here -->
   </section>
 
-  <section id="book-submisson">
+  <section class="content-section" id="section2">
     <form class="Add-books" id="book-form">
       <h2>Add New Book</h2>
       <input
@@ -33,5 +55,9 @@
       <input class="submit-btn" type="submit" value="Add" />
     </form>
   </section>
+  <section class="content-section" id="section3">
+    <h1>Contact Us</h1>
+  </section>
+  <footer class="footer">Copyright</footer>
   <script src="/index.js"></script>
 </body>
