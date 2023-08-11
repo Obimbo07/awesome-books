@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale= 1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="Austin obimbo">
-        <title>Awesome Books</title>
-        <link rel="stylesheet" type="text/css" href="/index.css">
-    </head>
-    <body>
-        <header>
-            <h1>Awesome Books</h1>
-            <nav class="nav-bar">
-                <ul class="nav-items">
-                    <a href=""><li class="nav-item" id="list-btn" data-target="section1">List</li></a>
-                    <a href=""><li class="nav-item" id="Addnew-btn" data-target="section2">Add New</li></a>
-                    <a href=""><li class="nav-item" id="Contact-btn" data-target="section3">Contact us</li></a>
-                </ul>
-            </nav>
-        </header>
-        <div class="date-section">
-            <h1 id="date-display"></h1>
-        </div>
-        <section class="content-section" id="section1">
-            <!---books should be displayed here --> 
-        </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale= 1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Austin obimbo" />
+  <title>Awesome Books</title>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+  <header>
+    <h1>Awesome Books</h1>
+  </header>
+  <section id="available-books">
+    <!---books should be displayed here -->
+  </section>
 
-        <section class="content-section" id="section2">
-            <form class="Add-books" id="book-form">
-                <h2>Add New Book</h2>
-                <input class="book-input" type="text" id="book-title" placeholder="Enter your book title...">
-                <input class="book-input" type="text" id="Author" placeholder="Name of the Author">
-                <input class="submit-btn" type="submit" value="Add">
-            </form>
-        </section>
-        <section class="content-section" id="section3">
-            <h1>Contact Us</h1>
-        </section>
-        <footer class="footer">Copyright</footer>
-        <script src="/index.js"></script>
-    </body>
+  <section id="book-submisson">
+    <form class="Add-books" id="book-form">
+      <h2>Add New Book</h2>
+      <input
+        class="book-input"
+        type="text"
+        id="book-title"
+        placeholder="Enter your book title..."
+      />
+      <input
+        class="book-input"
+        type="text"
+        id="Author"
+        placeholder="Name of the Author"
+      />
+      <input class="submit-btn" type="submit" value="Add" />
+    </form>
+  </section>
+  <script src="/index.js"></script>
+</body>
