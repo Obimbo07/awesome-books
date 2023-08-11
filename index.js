@@ -1,19 +1,19 @@
 class BookLibrary {
   constructor() {
     this.books = [];
-    this.booksSection = document.getElementById('available-books');
-    this.bookForm = document.getElementById('book-form');
-    this.bookTitle = document.getElementById('book-title');
-    this.bookAuthor = document.getElementById('Author');
+    this.booksSection = document.getElementById("available-books");
+    this.bookForm = document.getElementById("book-form");
+    this.bookTitle = document.getElementById("book-title");
+    this.bookAuthor = document.getElementById("Author");
 
     this.loadBooksFromLocalStorage();
     this.displayBooks();
 
-    this.bookForm.addEventListener('submit', this.handleFormSubmit.bind(this));
+    this.bookForm.addEventListener("submit", this.handleFormSubmit.bind(this));
   }
 
   loadBooksFromLocalStorage() {
-    const data = JSON.parse(localStorage.getItem('bookData'));
+    const data = JSON.parse(localStorage.getItem("bookData"));
     if (data) {
       this.bookTitle.value = data.bookTitle;
       this.bookAuthor.value = data.bookAuthor;
@@ -21,10 +21,13 @@ class BookLibrary {
   }
 
   saveBooksToLocalStorage() {
-    localStorage.setItem('bookData', JSON.stringify({
-      bookTitle: this.bookTitle.value,
-      bookAuthor: this.bookAuthor.value,
-    }));
+    localStorage.setItem(
+      "bookData",
+      JSON.stringify({
+        bookTitle: this.bookTitle.value,
+        bookAuthor: this.bookAuthor.value,
+      })
+    );
   }
 
   handleFormSubmit(event) {
@@ -52,20 +55,20 @@ class BookLibrary {
   }
 
   displayBooks() {
-    this.booksSection.innerHTML = '';
+    this.booksSection.innerHTML = "";
 
     this.books.forEach((book, index) => {
-      const bookElement = document.createElement('div');
-      bookElement.classList.add('book');
+      const bookElement = document.createElement("div");
+      bookElement.classList.add("book");
       bookElement.innerHTML = `
                 <h2>"${book.title}" by</h2> <p>${book.Author}</p>
             `;
 
-      const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remove';
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "Remove";
       bookElement.appendChild(removeButton);
 
-      removeButton.addEventListener('click', () => {
+      removeButton.addEventListener("click", () => {
         this.removeBook(index);
       });
 
@@ -74,8 +77,8 @@ class BookLibrary {
   }
 
   clearForm() {
-    this.bookTitle.value = '';
-    this.bookAuthor.value = '';
+    this.bookTitle.value = "";
+    this.bookAuthor.value = "";
   }
 }
 // eslint-disable-next-line no-unused-vars
