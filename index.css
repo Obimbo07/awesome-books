@@ -75,14 +75,6 @@ button {
   padding: 3px 6px;
 }
 
-#section2 {
-  width: 100vw;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-
 .Add-books {
   width: 70vw;
   margin: 2vh 0;
